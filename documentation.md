@@ -10,7 +10,7 @@ The following documentation highlights the best practices and the things to be c
 
 Our tool converts static Figma design to React and HTML/CSS to an almost pixel-perfect extent. Our tool supports various types of linear Frame-to-Frame prototyping interactive prototyping Figma flows, enabling you to get code for static as well as dynamic user experiences built on Figma.
 <br><br>
-For either type, you just need to start by selecting the Static Frame or the Starting Frame of the flow. For Static Designs, you get the option of copying the HTML/CSS. If you’re converting an interactive flow into code, you'll also get animation scripts (javascript) that'll be responsible for animation's control flow.
+For either type, you just need to start by selecting the Static Frame or the Starting Frame of the flow(Interactive Prototype). For Static Designs, you get the option of copying the HTML/CSS. If you’re converting an interactive prototype into code, you'll also get animation scripts (javascript) that'll be responsible for animation's control flow.
 <br>
 <br>
 You can just copy & paste the generated code in your project.
