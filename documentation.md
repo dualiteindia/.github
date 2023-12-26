@@ -2,24 +2,22 @@
 
 ## Overview
 
-Our tool converts static Figma design to React and HTML/CSS to an almost pixel-perfect extent. Our tool supports various types of linear Frame-to-Frame prototyping interactive prototyping Figma flows, enabling you to get code for static as well as dynamic user experiences built on Figma.
+Our tool converts static and interactive Figma designs to React and HTML/CSS to an almost pixel-perfect extent. Our tool supports various types of linear Frame-to-Frame prototyping interactive prototyping Figma flows.
 <br><br>
-For either type, you just need to start by selecting the Static Frame or the Starting Frame of the flow(Interactive Prototype). For Static Designs, you get the option of copying the HTML/CSS. If you’re converting an interactive prototype into code, you'll also get animation scripts (javascript) that'll be responsible for animation's control flow.
+For either type, you just need to start by selecting the Static Frame or the Starting Frame of the flow(Interactive Prototype). For Static Designs, you get the option of copying the code. If you’re converting an interactive prototype into code, you'll also get animation scripts (javascript) that'll be responsible for animation's control flow.
 <br>
 <br>
 You can just copy & paste the generated code in your project.
 We’ve also provided a direct **_‘Preview in Code Sandbox’_** option that lets you skip the copy-paste effort and directly makes you preview the result as well as the encompassing code.
 
-## Version Update - beta_v3
-
-We've been working on Dualite for the past 10 months. We've been constantly improving the plugin based on user feedbacks and our internal testing. We've been working on the beta_v3 for the past 3-4 months. We've added a lot of new features and improved the existing ones. We've also improved the overall performance of the plugin quite a lot.
-
 ## What's new in beta_v3
 
+We've added a lot of new features and improved the existing ones. We've also improved the overall performance of the plugin quite a lot.
+
 - React and HTML conversion, both with Vanilla CSS.
-- Figma Prototypes (even complicated ones) to CSS Animations (KeyFrames).
+- Figma Prototypes (even more complicated ones) to CSS Animations (KeyFrames).
 - Figma Dev Mode support.
-- Optimized image conversion process and internal algorithms, that has reduced the conversion time by almost 5x.
+- Optimized image conversion process and internal algorithms, that has reduced the conversion time by upto 10x.
 - Optimized Linear prototyping to CSS animations logic.
 - Overall faster conversions in beta_v3, compared to beta_v2.
   <br><br>
@@ -27,8 +25,8 @@ We've been working on Dualite for the past 10 months. We've been constantly impr
   <br><br>
 - You can now report issues and give us your feedback on this github repository.
 - Improved new UI.
-- Bug Fixes. Some commonly faced issues with Instances have been fixed along with some other issues found in internal testing and user feedbacks.
-- We've also added a new feature that allows you to convert another design without closing the plugin. This will save you a lot of time and effort.
+- Bug Fixes: Some commonly faced issues with Instances have been fixed along with some other issues found in internal testing and user feedbacks.
+- We've also added a new feature that allows you to convert another design without closing the plugin, saving you a lot of time and effort.
 
 ## Things to keep in mind (for designers)
 
@@ -36,7 +34,7 @@ As designers, there are some minor changes and guidelines, which will make the g
 
 1. **Use fonts that are available on Google Fonts.**<br>
    We use Google Fonts for the generated code. So, if you use a font that is not available on Google Fonts, it will be replaced by the default font, which is Times New Roman. You can check the list of fonts available on Google Fonts [here](https://fonts.google.com/).
-   <br> If you want to use a font that is not available on Google Fonts, your developer can add the font manually in the code. For that, you need to download the font and add it to your project. You can check out the steps to do that [here](https://www.w3schools.com/css/css3_fonts.asp).
+   <br><br> If you want to use a font that is not available on Google Fonts, your developer can add the font manually in the code. For that, you need to download the font and add it to your project. You can check out the steps to do that [here](https://www.w3schools.com/css/css3_fonts.asp).
 2. **Font Size mismatches**<br>
    The font size displayed in Figma can be larger than the actual browser. This is an inherent Figma issue and not a Dualite issue. <br><br>
    <img alt="font size mismatch" src="./image-2.png" width="500" height="auto">
@@ -47,7 +45,7 @@ As designers, there are some minor changes and guidelines, which will make the g
    <br>
    Fonts should now look the same as in the browser.
 3. **Group Rotations**<br>
-   We're working on handling all sorts of group rotations and flips in the upcoming updates. For now, we recommend you to avoid using group rotations and flips, hence if you face any issues with the generated code, you can try changing that group to frame and then try again.<br>
+   We're working on handling all sorts of group rotations and flips in the upcoming updates. For now, we recommend you to avoid using group rotations and flips, hence if you face any issues with the generated code, you can try changing that group to frame and then try again.<br><br>
    If you're still facing any complicated issue, you can export that frame/group as an image and then use that image in your code.
 4. **Naming in Interactive Prototypes**<br>
    Naming is important for the identification of elements in any interactive prototyping, especially if your flow is dealing with Smart-Animate transitions between frames.
@@ -64,27 +62,27 @@ As designers, there are some minor changes and guidelines, which will make the g
    <img alt="how to name" src="./image-1.png" width="500" height="auto">
    <br>
 
-5. **Trigger**<br>
-   Whatever element/group/sub-frame inside a Parent Frame the trigger is put to, it is recommended that the element/group/sub-frame be at the top inside the overall order or collection if it's the direct child of the parent frame or at the top of the corresponding order inside any child or sub-child of the parent frame
+<!-- 5. **Trigger**<br>
+   Whatever element/group/sub-frame inside a Parent Frame the trigger is put to, it is recommended that the element/group/sub-frame be at the top inside the overall order or collection if it's the direct child of the parent frame or at the top of the corresponding order inside any child or sub-child of the parent frame. -->
 
 ## Using the generated code (for developers)
 
 Here we'll be discussing how you can use Dualite for production applications or you next personal project. We've tried to make the generated code as simple as possible. You can just copy & paste the code in your project and it'll work. But there are some things that you should keep in mind.
 
 1. **Fonts** <br>
-   If you want to use a font that is not available on Google Fonts, you can add the font manually in the code. For that, you need to download the font and add it to your project. You can check out the steps to do that [here](https://www.w3schools.com/css/css3_fonts.asp). <br>
+   If you want to use a font that is not available on Google Fonts, you can add the font manually in the code. For that, you need to download the font and add it to your project. You can check out the steps to do that [here](https://www.w3schools.com/css/css3_fonts.asp). <br><br>
 2. **Animations**<br>
-   We use CSS animations for the generated code. So, you don't need to add any animation library manually. We use the JavaScript code for controlling the animations. So, if you want to add any animation manually, you can do that by adding the animation class manually and then controlling it using the JavaScript code. You can check out the steps to do that [here](https://www.w3schools.com/css/css3_animations.asp).
+   We use CSS animations for the generated code. So, you don't need to add any animation library manually. We use the JavaScript code for controlling the animations. So, if you want to add any animation manually, you can do that by adding the animation class manually and then controlling it using the JavaScript code. You can check out the steps to do that [here](https://www.w3schools.com/css/css3_animations.asp).<br><br>
 3. **Positioning**<br>
    We use absolute positioning as of now for the generated code. So, if you want to add any element manually, you can do that by adding the element manually and then positioning it using the CSS code.
    <br>
-   We've already added a wrapper div ("parent-div") for the entire code. So, you can just position that wrapper div and all the elements inside it will be positioned accordingly.
+   We've already added a wrapper div ("parent-div") for the entire code. So, you can just position that wrapper div and all the elements inside it will be positioned accordingly.<br><br>
 4. **Images**<br>
    For smaller vectors/shapes (under 50kB) we use base64 encoding. For larger images, we use AWS S3 & Firebase. We recommend to transfer all assets locally or to your own cloud hosting service for production applications. We'll be soon adding an option to download all assets and code as a zip file.
-   <br>
+   <br><br>
 5. **Shadows**<br>
    We use box-shadow for the generated code. So, if you need to add a non-boxed shadow, you can do that with filter: drop-shadow() property. You can check out the steps to do that [here](https://www.w3schools.com/cssref/css3_pr_filter.asp).
-   We're not using this currently because of browser compatibility issues and no support for spread and inset shadows. We'll be adding support for this in the future.
+   We're not using this currently because of browser compatibility issues and no support for spread and inset shadows. We'll be adding support for this in the future.<br>
 
 ## How to use the plugin?
 
@@ -92,7 +90,7 @@ We've tried to make the plugin as simple as possible. You can just follow the st
 <br><br>
 ![Alt text](image-3.png)
 
-## Future Updates
+<!-- ## Future Updates
 
 We're here with a long term vision. We're working on a lot of new features and improvements. Here are some of the things that we're working on.
 
@@ -109,19 +107,20 @@ We're here with a long term vision. We're working on a lot of new features and i
 - **Support for CSS frameworks** <br>
   We're working on adding support for CSS frameworks like Tailwind CSS, Bootstrap, Material UI, etc in the future.
 - **Support for branched prototyping** <br>
-  We're working on adding support for branched prototyping in the future.
+  We're working on adding support for branched prototyping in the future. -->
 
-#### Faced anything other than mentioned above? Tell us now by raising an Issue [here].
+#### Faced anything other than mentioned above? Tell us now by raising an Issue [here](https://github.com/dualiteindia/.github/issues).
 
 ## How we convert your designs to code?
 
-800+ commits <br>
-15k+ Lines of code <br>
-4 developers (and their sleepless nights) <br>
-and countless hours of brainstorming<br>
+🪜 800+ commits <br>
+👩‍💻 15k+ Lines of code <br>
+🧑🏻‍💻 4 developers (and their sleepless nights) <br>
+🧠 Countless hours of brainstorming <br>
 
-this has made Dualite, the fastest evolving Indian Figma plugin.
-<br>Let's get you a sneak peak of how exactly Dualite works internally.
+This has made Dualite the first plugin to convert interactive protoypes into quality React and HTML/CSS code.
+<br>
+Let's get you a sneak peak of how exactly Dualite works internally.
 
 ### Technology
 
