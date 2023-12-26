@@ -1,11 +1,5 @@
 # Dualite Plugin - User Documentation
 
-## Version Update - beta_v3
-
-Dualite is a powerful tool that seamlessly converts Figma interactive designs into code, pixel-perfect, providing developers with a streamlined workflow and reducing the time and effort required to bring interactive and animated designs to life.
-<br><br>
-The following documentation highlights the best practices and the things to be cautious about utilising the tool to its maximum efficiency, ensuring optimal results while keeping in mind its current capabilities and upcoming features.
-
 ## Overview
 
 Our tool converts static Figma design to React and HTML/CSS to an almost pixel-perfect extent. Our tool supports various types of linear Frame-to-Frame prototyping interactive prototyping Figma flows, enabling you to get code for static as well as dynamic user experiences built on Figma.
@@ -15,6 +9,10 @@ For either type, you just need to start by selecting the Static Frame or the Sta
 <br>
 You can just copy & paste the generated code in your project.
 We’ve also provided a direct **_‘Preview in Code Sandbox’_** option that lets you skip the copy-paste effort and directly makes you preview the result as well as the encompassing code.
+
+## Version Update - beta_v3
+
+We've been working on Dualite for the past 10 months. We've been constantly improving the plugin based on user feedbacks and our internal testing. We've been working on the beta_v3 for the past 3-4 months. We've added a lot of new features and improved the existing ones. We've also improved the overall performance of the plugin quite a lot.
 
 ## What's new in beta_v3
 
@@ -68,13 +66,27 @@ Here we'll be discussing how you can use Dualite for production applications or 
    <br>
    We've already added a wrapper div ("parent-div") for the entire code. So, you can just position that wrapper div and all the elements inside it will be positioned accordingly.
 4. **Images**<br>
-   All images are cloud hosted. So, you don't need to add any image manually. You can just copy & paste the code in your project and it'll work. For smaller vectors/shapes (under 50kB) we use base64 encoding. For larger images, we use cloud hosting. We use AWS and Firebase for cloud hosting. We recommend to transfer all assets locally or to your own cloud hosting service for production applications. We'll be soon adding an option to download all assets and code as a zip file.
+   For smaller vectors/shapes (under 50kB) we use base64 encoding. For larger images, we use AWS S3 & Firebase. We recommend to transfer all assets locally or to your own cloud hosting service for production applications. We'll be soon adding an option to download all assets and code as a zip file.
    <br>
 
 ## Future Updates
 
-We're here with a long term vision.
-<br>[issues list]<br>
+We're here with a long term vision. We're working on a lot of new features and improvements. Here are some of the things that we're working on.
+
+- **Download as a zip file** <br>
+  We'll be soon adding an option to download all assets and code as a zip file.
+- **Components and Variants based animations** <br>
+  We currently do not support Components and Variants-based Smart Animation transition. However, we fully support and generate code for any Figma component in static designs. We are actively developing support for interactive components and variants.
+- **Support for more frameworks** <br>
+  We currently support React.js and HTML/CSS. We're working on adding support for more frameworks like Vue.js, Angular, Svelte, etc and mobile frameworks like Flutter and React Native in the future.
+- **Responsive Design** <br>
+  Currently our generated code uses absolute positioning. We're working on adding support for responsive design patterns like Flexbox and Grid in the future. <br>
+  The other popular tools in the market use Flexbox to some extent, but their solution relys on how perfectly you've designed your Figma design and used auto-layouts, which indeed increases complexity on the designer's end. If you've designed your Figma design perfectly, then you'll get a good result. But if you've not designed your Figma design perfectly, then you'll get a bad result. <br>
+  However, we're working on a more robust solution that will allow you to easily convert your designs to responsive code even with less reliance on auto-layouts.
+- **Support for CSS frameworks** <br>
+  We're working on adding support for CSS frameworks like Tailwind CSS, Bootstrap, Material UI, etc in the future.
+- **Support for branched prototyping** <br>
+  We're working on adding support for branched prototyping in the future.
 
 #### Faced anything other than mentioned above? Tell us now by raising an Issue [here].
 
