@@ -22,7 +22,9 @@ We've been working on Dualite for the past 10 months. We've been constantly impr
 - Optimized image conversion process and internal algorithms, that has reduced the conversion time by almost 5x.
 - Optimized Linear prototyping to CSS animations logic.
 - Overall faster conversions in beta_v3, compared to beta_v2.
-  <br>[Speed and efficiency comparision graph between beta_v1, beta_v2 and latest beta_v3] <br>
+  <br><br>
+  <img alt="speed" src="./speed.png" width="500" height="auto">
+  <br><br>
 - You can now report issues and give us your feedback on this github repository.
 - Improved new UI.
 - Bug Fixes. Some commonly faced issues with Instances have been fixed along with some other issues found in internal testing and user feedbacks.
@@ -36,7 +38,10 @@ As designers, there are some minor changes and guidelines, which will make the g
    We use Google Fonts for the generated code. So, if you use a font that is not available on Google Fonts, it will be replaced by the default font, which is Times New Roman. You can check the list of fonts available on Google Fonts [here](https://fonts.google.com/).
    <br> If you want to use a font that is not available on Google Fonts, your developer can add the font manually in the code. For that, you need to download the font and add it to your project. You can check out the steps to do that [here](https://www.w3schools.com/css/css3_fonts.asp).
 2. **Font Size mismatches**<br>
-   The font size displayed in Figma can be larger than the actual browser. This is an inherent Figma issue and not a Dualite issue. <br>
+   The font size displayed in Figma can be larger than the actual browser. This is an inherent Figma issue and not a Dualite issue. <br><br>
+   <img alt="font size mismatch" src="./image-2.png" width="500" height="auto">
+   <br>
+   <br>
    You can solve the above to a certain extent by going within the Figma desktop app.  <br>
    **View > Interface Scale > Reset to Default**
    <br>
@@ -47,9 +52,18 @@ As designers, there are some minor changes and guidelines, which will make the g
 4. **Naming in Interactive Prototypes**<br>
    Naming is important for the identification of elements in any interactive prototyping, especially if your flow is dealing with Smart-Animate transitions between frames.
    <br>
+   <img alt="how not to name" src="./image.png" width="500" height="auto">
+   <br>
+   <br>
    The naming of any elements or ‘nodes’ _inside_ the parent Frame involved in the transition entirely or a part of the transition should have the following properties:
+
    - consistent naming of the animating/transitioning element throughout the flow
-   - the element name must be unique and should not be identical to any other element involved in the transition
+   - the element name must be unique and should not be identical to any other element involved in the transition.
+
+   <br><br>
+   <img alt="how to name" src="./image-1.png" width="500" height="auto">
+   <br>
+
 5. **Trigger**<br>
    Whatever element/group/sub-frame inside a Parent Frame the trigger is put to, it is recommended that the element/group/sub-frame be at the top inside the overall order or collection if it's the direct child of the parent frame or at the top of the corresponding order inside any child or sub-child of the parent frame
 
@@ -68,6 +82,15 @@ Here we'll be discussing how you can use Dualite for production applications or 
 4. **Images**<br>
    For smaller vectors/shapes (under 50kB) we use base64 encoding. For larger images, we use AWS S3 & Firebase. We recommend to transfer all assets locally or to your own cloud hosting service for production applications. We'll be soon adding an option to download all assets and code as a zip file.
    <br>
+5. **Shadows**<br>
+   We use box-shadow for the generated code. So, if you need to add a non-boxed shadow, you can do that with filter: drop-shadow() property. You can check out the steps to do that [here](https://www.w3schools.com/cssref/css3_pr_filter.asp).
+   We're not using this currently because of browser compatibility issues and no support for spread and inset shadows. We'll be adding support for this in the future.
+
+## How to use the plugin?
+
+We've tried to make the plugin as simple as possible. You can just follow the steps below to use the plugin.
+<br><br>
+![Alt text](image-3.png)
 
 ## Future Updates
 
@@ -94,7 +117,7 @@ We're here with a long term vision. We're working on a lot of new features and i
 
 800+ commits <br>
 15k+ Lines of code <br>
-4 developers (and their blood) <br>
+4 developers (and their sleepless nights) <br>
 and countless hours of brainstorming<br>
 
 this has made Dualite, the fastest evolving Indian Figma plugin.
@@ -116,6 +139,8 @@ We have developed a modular & scalable structure that allows us to easily add ne
 
 ## Want to share your thoughts?
 
-Add an issue with "feedback" label here, or mail us directly at info@dualite.in
+We’ve tried our best to jot down the best practices, through which you can maximise the benefits of our design-to-code tool and effectively convert Figma interactive designs into functional code.
+
+If you’re facing any other problems or queries, add an issue with "bug" or "issue" label here. We’ll get back to you as soon as possible. If you want to share your thoughts or feedback, add an issue with "feedback" label here.
 <br><br>
 Join our [Discord Server] to get the latest updates and to interact with the community.
