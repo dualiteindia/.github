@@ -143,4 +143,4 @@ We’ve tried our best to jot down the best practices, through which you can max
 
 If you’re facing any other problems or queries, add an issue with "bug" or "issue" label here. We’ll get back to you as soon as possible. If you want to share your thoughts or feedback, add an issue with "feedback" label here.
 <br><br>
-Join our [Discord Server] to get the latest updates and to interact with the community.
+Join our [Discord Server](https://discord.com/invite/uFA89PUV) to get the latest updates and to interact with the community.
