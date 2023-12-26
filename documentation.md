@@ -28,14 +28,48 @@ We’ve also provided a direct **_‘Preview in Code Sandbox’_** option that l
 - You can now report issues and give us your feedback on this github repository.
 - Improved new UI.
 - Bug Fixes. Some commonly faced issues with Instances have been fixed along with some other issues found in internal testing and user feedbacks.
+- We've also added a new feature that allows you to convert another design without closing the plugin. This will save you a lot of time and effort.
 
 ## Things to keep in mind (for designers)
 
 As designers, there are some minor changes and guidelines, which will make the generated code much better and easily integratable. Here are some tips.
 
+1. **Use fonts that are available on Google Fonts.**<br>
+   We use Google Fonts for the generated code. So, if you use a font that is not available on Google Fonts, it will be replaced by the default font, which is Times New Roman. You can check the list of fonts available on Google Fonts [here](https://fonts.google.com/).
+   <br> If you want to use a font that is not available on Google Fonts, your developer can add the font manually in the code. For that, you need to download the font and add it to your project. You can check out the steps to do that [here](https://www.w3schools.com/css/css3_fonts.asp).
+2. **Font Size mismatches**<br>
+   The font size displayed in Figma can be larger than the actual browser. This is an inherent Figma issue and not a Dualite issue. <br>
+   You can solve the above to a certain extent by going within the Figma desktop app.  <br>
+   **View > Interface Scale > Reset to Default**
+   <br>
+   Fonts should now look the same as in the browser.
+3. **Group Rotations**<br>
+   We're working on handling all sorts of group rotations and flips in the upcoming updates. For now, we recommend you to avoid using group rotations and flips, hence if you face any issues with the generated code, you can try changing that group to frame and then try again.<br>
+   If you're still facing any complicated issue, you can export that frame/group as an image and then use that image in your code.
+4. **Naming in Interactive Prototypes**<br>
+   Naming is important for the identification of elements in any interactive prototyping, especially if your flow is dealing with Smart-Animate transitions between frames.
+   <br>
+   The naming of any elements or ‘nodes’ _inside_ the parent Frame involved in the transition entirely or a part of the transition should have the following properties:
+   - consistent naming of the animating/transitioning element throughout the flow
+   - the element name must be unique and should not be identical to any other element involved in the transition
+5. **Trigger**<br>
+   Whatever element/group/sub-frame inside a Parent Frame the trigger is put to, it is recommended that the element/group/sub-frame be at the top inside the overall order or collection if it's the direct child of the parent frame or at the top of the corresponding order inside any child or sub-child of the parent frame
+
 ## Using the generated code (for developers)
 
-Here we'll be discussing how you can use Dualite for production applications or you next personal project.
+Here we'll be discussing how you can use Dualite for production applications or you next personal project. We've tried to make the generated code as simple as possible. You can just copy & paste the code in your project and it'll work. But there are some things that you should keep in mind.
+
+1. **Fonts** <br>
+   If you want to use a font that is not available on Google Fonts, you can add the font manually in the code. For that, you need to download the font and add it to your project. You can check out the steps to do that [here](https://www.w3schools.com/css/css3_fonts.asp). <br>
+2. **Animations**<br>
+   We use CSS animations for the generated code. So, you don't need to add any animation library manually. We use the JavaScript code for controlling the animations. So, if you want to add any animation manually, you can do that by adding the animation class manually and then controlling it using the JavaScript code. You can check out the steps to do that [here](https://www.w3schools.com/css/css3_animations.asp).
+3. **Positioning**<br>
+   We use absolute positioning as of now for the generated code. So, if you want to add any element manually, you can do that by adding the element manually and then positioning it using the CSS code.
+   <br>
+   We've already added a wrapper div ("parent-div") for the entire code. So, you can just position that wrapper div and all the elements inside it will be positioned accordingly.
+4. **Images**<br>
+   All images are cloud hosted. So, you don't need to add any image manually. You can just copy & paste the code in your project and it'll work. For smaller vectors/shapes (under 50kB) we use base64 encoding. For larger images, we use cloud hosting. We use AWS and Firebase for cloud hosting. We recommend to transfer all assets locally or to your own cloud hosting service for production applications. We'll be soon adding an option to download all assets and code as a zip file.
+   <br>
 
 ## Future Updates
 
@@ -44,10 +78,10 @@ We're here with a long term vision.
 
 #### Faced anything other than mentioned above? Tell us now by raising an Issue [here].
 
-## Want to know how we do it?
+## How we convert your designs to code?
 
-1000+ commits <br>
-20k+ Lines of code <br>
+800+ commits <br>
+15k+ Lines of code <br>
 4 developers (and their blood) <br>
 and countless hours of brainstorming<br>
 
@@ -56,7 +90,13 @@ this has made Dualite, the fastest evolving Indian Figma plugin.
 
 ### Technology
 
-We use TypeScript, React.js, Redux and esBuild for the plugin and Next.js, React.js, Firebase, Express.js, MongoDB and AWS for essential services.
+- We use TypeScript, React.js, Redux and esBuild for the plugin and Next.js, React.js, Firebase, Express.js, MongoDB and AWS for essential services.
+
+- We're using Figma's OAuth2 for user authentication. We use Figma's REST API and Plugin API for fetching the designs and other data like images, fonts, etc.
+
+- We're using our in-house developed algorithms for the processing of your designs. These algorithms are written in TypeScript mainly.
+
+- We're using esBuild for the processing of your designs. esBuild is a JavaScript bundler and minifier. It's fast, really fast. It's written in Go, which makes it faster than other JavaScript bundlers. It's also used by Figma internally for their plugin bundling.
 
 ### Architecture
 
@@ -65,3 +105,5 @@ We have developed a modular & scalable structure that allows us to easily add ne
 ## Want to share your thoughts?
 
 Add an issue with "feedback" label here, or mail us directly at info@dualite.in
+<br><br>
+Join our [Discord Server] to get the latest updates and to interact with the community.
